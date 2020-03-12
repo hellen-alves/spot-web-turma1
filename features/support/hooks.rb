@@ -20,8 +20,8 @@ end
 # end
 
 After do |scenario|
-  sreenshot = page.save_screenshot("logs/screenshots/#{scenario.__id__}.png")
-  embed(screenshot, "image/png", "Screenshots")
+  screenshot = page.save_screenshot("logs/screenshots/#{scenario.__id__}.png")
+  embed(screenshot, "image/png", "Screenshot")
 end
 
 ReportBuilder.configure do |config|
